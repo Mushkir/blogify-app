@@ -28,7 +28,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="font-Sen bg-lightColor min-h-screen ">
+    <div className="font-Sen bg-lightColor min-h-screen sm:w-full ">
       <h2 className=" text-center pt-10 text-4xl font-semibold">
         Our New Posts
       </h2>

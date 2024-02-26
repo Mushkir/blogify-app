@@ -21,7 +21,7 @@ const PostCard = ({ title, postId }) => {
 
   return (
     <div>
-      <div className="card bg-primaryColor w-[320px] h-[430px] rounded-md mb-10 shadow">
+      <div className="card bg-primaryColor sm:w-[320px] h-[430px] rounded-md mb-10 shadow">
         <img
           src="https://images.unsplash.com/photo-1542435503-956c469947f6?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YmxvZ3xlbnwwfHwwfHx8MA%3D%3D"
           alt="Blog Pic"

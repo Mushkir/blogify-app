@@ -2,18 +2,22 @@ import { Link } from "react-router-dom";
 
 const TheNavBar = () => {
   return (
-    <div className="font-Sen bg-primaryColor text-white flex justify-between px-20 py-10">
-      <Link to="/" className="font-semibold text-3xl">
+    <div className="font-Sen bg-primaryColor text-white sm:flex justify-between px-20 py-10">
+      <Link to="/" className="font-semibold text-3xl text-center">
         Blogify
       </Link>
 
-      <ul className="flex gap-x-10 items-center">
-        <Link to="/">Home</Link>
-        <Link to="/add_post">Add a New Post</Link>
+      <ul className="sm:flex gap-x-10 items-center">
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/add_post">Add a New Post</Link>
+        </li>
         <Link
           to="https://github.com/Mushkir/cyberdude-hackathon-blog-app-MERN"
           target="_blank"
-          className="flex items-center gap-x-1.5 bg-lightColor px-5 py-2 rounded-md text-primaryColor hover:bg-hoverButtonColor hover:font-semibold"
+          className="flex items-center justify-center gap-x-1.5 bg-lightColor px-5 py-2 rounded-md text-primaryColor hover:bg-hoverButtonColor hover:font-semibold"
         >
           <div>
             <svg
