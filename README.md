@@ -23,7 +23,7 @@ Discover the convergence of modern web technologies in our latest blog post! Usi
 
 ## Live Link:
 
-https://blogify-ufrs1z3pz-mushkirs-projects.vercel.app/
+https://blogify-app-ishb-git-main-mushkirs-projects.vercel.app/
 
 ## Screenshot
 
@@ -95,3 +95,6 @@ GitHub Repo: https://github.com/Mushkir/blogify-app
 [--MIT]
 
 ## Acknowledgments
+
+[Dinesh](https://github.com/dineshdevelope)
+[Esakki](https://github.com/esakki2104prsnl)
