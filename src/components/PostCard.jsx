@@ -1,13 +1,7 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 
 const PostCard = ({ title, postId }) => {
-  const navigate = useNavigate();
-  // const redirectToViewPage = () => {
-  //   navigate(`:/id`);
-  // };
-
   return (
     <div>
       <div className="card bg-primaryColor w-[320px] h-[430px] rounded-md mb-10 shadow">
@@ -20,13 +14,25 @@ const PostCard = ({ title, postId }) => {
           <h3 className="text-white text-base text-left font-semibold">
             {title}
           </h3>
-          <Link
-            to={`/view_post/${postId}`}
-            className="bg-lightColor w-full rounded-md mt-5 py-2 hover:bg-hoverButtonColor"
-            // onClick={redirectToViewPage}
-          >
-            View Post
-          </Link>
+          <div className="flex items-center justify-between gap-x-3">
+            {/* View Button */}
+            <Link
+              to={`/view_post/${postId}`}
+              className="bg-lightColor w-full rounded-md mt-5 py-2 hover:bg-hoverButtonColor block text-center hover:font-semibold"
+              // onClick={redirectToViewPage}
+            >
+              View Post
+            </Link>
+
+            {/* Delete Button */}
+            <Link
+              to={`/view_post/${postId}`}
+              className="bg-lightColor w-full rounded-md mt-5 py-2 hover:bg-hoverButtonColor block text-center hover:font-semibold"
+              // onClick={redirectToViewPage}
+            >
+              Delete Post
+            </Link>
+          </div>
         </div>
       </div>
     </div>

@@ -7,6 +7,7 @@ import HomePage from "./Pages/HomePage.jsx";
 import ViewPage from "./Pages/ViewPage.jsx";
 import AddBlog from "./Pages/AddBlogPage.jsx";
 import "./firebase/index.firebase.credintials.js";
+import EditPage from "./Pages/EditPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/view_post/:id",
         element: <ViewPage />,
+      },
+      {
+        path: "/edit/:id",
+        element: <EditPage />,
       },
     ],
   },
