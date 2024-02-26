@@ -1,7 +1,24 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { doc, deleteDoc } from "firebase/firestore";
+import { database } from "../firebase/index.firebase.credintials";
 
 const PostCard = ({ title, postId }) => {
+  const refreshPage = () => {
+    window.location.reload(false);
+  };
+
+  const handleDelete = async () => {
+    try {
+      await deleteDoc(doc(database, "posts", postId));
+      alert("Data deleted successfully");
+      refreshPage(); // * Need to refresh the page after delete the record.
+      console.log("Document deleted successfully.");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div>
       <div className="card bg-primaryColor w-[320px] h-[430px] rounded-md mb-10 shadow">
@@ -25,13 +42,12 @@ const PostCard = ({ title, postId }) => {
             </Link>
 
             {/* Delete Button */}
-            <Link
-              to={`/view_post/${postId}`}
+            <button
+              onClick={handleDelete}
               className="bg-lightColor w-full rounded-md mt-5 py-2 hover:bg-hoverButtonColor block text-center hover:font-semibold"
-              // onClick={redirectToViewPage}
             >
               Delete Post
-            </Link>
+            </button>
           </div>
         </div>
       </div>
